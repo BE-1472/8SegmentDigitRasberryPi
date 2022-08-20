@@ -70,12 +70,12 @@ def drawSeven():
 def drawEight():
     for i in pinNumbersArray:
         GPIO.output(i, 1)
-        
+
 def drawNine():
     GPIO.output(19, 1)
     GPIO.output(13, 1)
-    GPIO.output(12, 1)
-    GPIO.output(16, 1)
+    GPIO.output(26, 1)
+    GPIO.output(22, 1)
     GPIO.output(20, 1)
 
 def clearDigit():
