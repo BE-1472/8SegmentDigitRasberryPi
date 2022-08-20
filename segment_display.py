@@ -26,28 +26,84 @@ def drawZero():
     GPIO.output(26, 1)
     
 def drawOne():
+    GPIO.output(26, 1)
+    GPIO.output(20, 1)
     
 def drawTwo():
-
+    GPIO.output(19, 1)
+    GPIO.output(26, 1)
+    GPIO.output(22, 1)
+    GPIO.output(12, 1)
+    GPIO.output(16, 1)
+    
 def drawThree():
+    GPIO.output(19, 1)
+    GPIO.output(26, 1)
+    GPIO.output(22, 1)
+    GPIO.output(20, 1)
+    GPIO.output(16, 1)
 
 def drawFour():
+    GPIO.output(13, 1)
+    GPIO.output(22, 1)
+    GPIO.output(20, 1)
 
 def drawFive():
-
-def drawSix():
-
-def drawSeven():
-
-def drawEight():
-
-def drawNine():
-
-def clearDigit()
-    for i in pinNumbersArray:
-    GPIO.output(i, 0)
+    GPIO.output(19, 1)
+    GPIO.output(13, 1)
+    GPIO.output(22, 1)
+    GPIO.output(20, 1)
+    GPIO.output(16, 1)
     
-def loopThroughPins()
+def drawSix():
+    GPIO.output(13, 1)
+    GPIO.output(22, 1)
+    GPIO.output(12, 1)
+    GPIO.output(16, 1)
+    GPIO.output(20, 1)
+    
+def drawSeven():
+    GPIO.output(19, 1)
+    GPIO.output(26, 1)
+    GPIO.output(20, 1)
+    
+def drawEight():
+    for i in pinNumbers:
+        GPIO.output(i, 1)
+        
+def drawNine():
+    GPIO.output(19, 1)
+    GPIO.output(13, 1)
+    GPIO.output(12, 1)
+    GPIO.output(16, 1)
+    GPIO.output(20, 1)
+
+def clearDigit():
+    for i in pinNumbersArray:
+        GPIO.output(i, 0)
+    
+def loopThorughDigits():
+    drawOne()
+    clearDigit()
+    drawTwo()
+    clearDigit()
+    drawThree()
+    clearDigit()
+    drawFour()
+    clearDigit()
+    drawFive()
+    clearDigit()
+    drawSix()
+    clearDigit()
+    drawSeven()
+    clearDigit()
+    drawEight()
+    clearDigit()
+    drawNine()
+    clearDigit()
+    
+    
+def loopThroughPins():
         GPIO.output(21, 1)
         sleep(timeDelimiter)
         GPIO.output(21, 0)
@@ -85,7 +141,7 @@ timeDelimiter = 1.0
 
 try:  
     while True:  
-        loopThroughPins()
+        loopThorughDigits()
   
 except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt  
     GPIO.cleanup()                 # resets all GPIO ports used by this program  
