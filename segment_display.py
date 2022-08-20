@@ -68,7 +68,7 @@ def drawSeven():
     GPIO.output(20, 1)
     
 def drawEight():
-    for i in pinNumbers:
+    for i in pinNumbersArray:
         GPIO.output(i, 1)
         
 def drawNine():
