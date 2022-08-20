@@ -1,9 +1,9 @@
 
-import RPi.GPIO as GPIO            # import RPi.GPIO module  
+import RPi.GPIO as GPIO            # import RPi.GPIO module
 from time import sleep             # lets us have a delay
 import array
 
-GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
+GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD
 
 pinNumbersArray = array.array('i', [21, 20, 16, 12, 26, 19, 13, 22])
 
@@ -84,22 +84,31 @@ def clearDigit():
     
 def loopThorughDigits():
     drawOne()
+    sleep(timeDelimiter)
     clearDigit()
     drawTwo()
+    sleep(timeDelimiter)
     clearDigit()
     drawThree()
+    sleep(timeDelimiter)
     clearDigit()
     drawFour()
+    sleep(timeDelimiter)
     clearDigit()
     drawFive()
+    sleep(timeDelimiter)
     clearDigit()
     drawSix()
+    sleep(timeDelimiter)
     clearDigit()
     drawSeven()
+    sleep(timeDelimiter)
     clearDigit()
     drawEight()
+    sleep(timeDelimiter)
     clearDigit()
     drawNine()
+    sleep(timeDelimiter)
     clearDigit()
     
     
@@ -139,9 +148,9 @@ def loopThroughPins():
     
 timeDelimiter = 1.0
 
-try:  
-    while True:  
+try:
+    while True:
         loopThorughDigits()
   
-except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt  
-    GPIO.cleanup()                 # resets all GPIO ports used by this program  
+except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt
+    GPIO.cleanup()                 # resets all GPIO ports used by this program
